@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aabid Mohamed | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <header>
@@ -21,30 +25,64 @@
   <section class="hero">
     <h2>Hi, I'm Aabid 👋</h2>
     <p>Aspiring Software Engineer | Backend + ML Enthusiast</p>
-    <a href="#projects" class="btn">View Projects</a>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="#contact" class="btn btn-outline">Get in Touch</a>
+    </div>
   </section>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I'm a final-year engineering student passionate about backend systems, ML, and app development. Currently building cool things and learning daily.</p>
+    <div class="about-content">
+      <p>I'm a final-year engineering student passionate about backend systems, ML, and app development. Currently building cool things and learning daily.</p>
+      <div class="skills">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Machine Learning</span>
+        <span class="skill-tag">Backend Development</span>
+        <span class="skill-tag">Streamlit</span>
+      </div>
+    </div>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-    <div class="project">
-      <h3>Paint Mixing App 🎨</h3>
-      <p>Predicts paint output by mixing input colors. Built with Python + Streamlit.</p>
-    </div>
-    <div class="project">
-      <h3>AI Symptom Tracker 🤖</h3>
-      <p>Uses NLP to predict disease likelihood from symptom text input.</p>
+    <div class="projects-grid">
+      <div class="project">
+        <div class="project-icon">🎨</div>
+        <h3>Paint Mixing App</h3>
+        <p>Predicts paint output by mixing input colors. Built with Python + Streamlit.</p>
+        <div class="project-links">
+          <a href="#" class="project-link"><i class="fab fa-github"></i> View Code</a>
+          <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+        </div>
+      </div>
+      <div class="project">
+        <div class="project-icon">🤖</div>
+        <h3>AI Symptom Tracker</h3>
+        <p>Uses NLP to predict disease likelihood from symptom text input.</p>
+        <div class="project-links">
+          <a href="#" class="project-link"><i class="fab fa-github"></i> View Code</a>
+          <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: aabidmohamed2003@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/Brohammad" target="_blank">Brohammad</a></p>
+    <h2>Get in Touch</h2>
+    <div class="contact-content">
+      <p>I'm always open to new opportunities and collaborations!</p>
+      <div class="contact-links">
+        <a href="mailto:aabidmohamed2003@gmail.com" class="contact-link">
+          <i class="fas fa-envelope"></i>
+          aabidmohamed2003@gmail.com
+        </a>
+        <a href="https://github.com/Brohammad" target="_blank" class="contact-link">
+          <i class="fab fa-github"></i>
+          Brohammad
+        </a>
+      </div>
+    </div>
   </section>
 
   <footer>
