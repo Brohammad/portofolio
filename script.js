@@ -99,3 +99,102 @@ sections.forEach(section => {
   section.classList.add('fade-in');
   observer.observe(section);
 });
+
+// Mouse Movement 3D Effect
+document.addEventListener('mousemove', (e) => {
+  const cards = document.querySelectorAll('.project, .blog-card');
+  const hero = document.querySelector('.hero');
+  
+  const mouseX = e.clientX / window.innerWidth - 0.5;
+  const mouseY = e.clientY / window.innerHeight - 0.5;
+  
+  // Hero section 3D effect
+  if (hero) {
+    const heroContent = hero.querySelectorAll('h2, p, .hero-buttons');
+    heroContent.forEach(element => {
+      const speed = element.getAttribute('data-speed') || 20;
+      const x = mouseX * speed;
+      const y = mouseY * speed;
+      element.style.transform = `translateZ(20px) translateX(${x}px) translateY(${y}px)`;
+    });
+  }
+  
+  // Cards 3D effect
+  cards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    const cardX = rect.left + rect.width / 2;
+    const cardY = rect.top + rect.height / 2;
+    
+    const angleX = (e.clientY - cardY) * 0.01;
+    const angleY = (e.clientX - cardX) * -0.01;
+    
+    card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateZ(10px)`;
+  });
+});
+
+// Reset card position when mouse leaves
+document.addEventListener('mouseleave', () => {
+  const cards = document.querySelectorAll('.project, .blog-card');
+  cards.forEach(card => {
+    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+  });
+});
+
+// Add parallax effect to sections
+const parallaxSections = document.querySelectorAll('section');
+window.addEventListener('scroll', () => {
+  parallaxSections.forEach(section => {
+    const speed = section.getAttribute('data-speed') || 0.5;
+    const rect = section.getBoundingClientRect();
+    const scroll = window.pageYOffset;
+    
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      const yPos = -(scroll * speed);
+      section.style.transform = `translateY(${yPos}px)`;
+    }
+  });
+});
+
+// Add 3D tilt effect to buttons
+const buttons = document.querySelectorAll('.btn');
+buttons.forEach(button => {
+  button.addEventListener('mousemove', (e) => {
+    const rect = button.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    
+    const angleX = (y - centerY) / 10;
+    const angleY = (centerX - x) / 10;
+    
+    button.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateZ(10px)`;
+  });
+  
+  button.addEventListener('mouseleave', () => {
+    button.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+  });
+});
+
+// Add 3D effect to skill tags
+const skillTags = document.querySelectorAll('.skill-tag');
+skillTags.forEach(tag => {
+  tag.addEventListener('mousemove', (e) => {
+    const rect = tag.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    
+    const angleX = (y - centerY) / 20;
+    const angleY = (centerX - x) / 20;
+    
+    tag.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateZ(10px)`;
+  });
+  
+  tag.addEventListener('mouseleave', () => {
+    tag.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+  });
+});
