@@ -9,85 +9,189 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Add meta tags for SEO -->
+  <meta name="description" content="Aabid Mohamed - Software Engineer specializing in Backend Development and Machine Learning">
+  <meta name="keywords" content="Software Engineer, Backend Developer, Machine Learning, Python, Portfolio">
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Aabid Mohamed</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Loading Screen -->
+  <div class="loading" id="loading-screen">
+    <div class="loading-spinner"></div>
+  </div>
 
-  <section class="hero">
-    <h2>Hi, I'm Aabid 👋</h2>
-    <p>Aspiring Software Engineer | Backend + ML Enthusiast</p>
-    <div class="hero-buttons">
-      <a href="#projects" class="btn">View Projects</a>
-      <a href="#contact" class="btn btn-outline">Get in Touch</a>
-    </div>
-  </section>
+  <!-- Main Content -->
+  <div class="main-content">
+    <header>
+      <nav>
+        <h1>Aabid Mohamed</h1>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </nav>
+    </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="about-content">
-      <p>I'm a final-year engineering student passionate about backend systems, ML, and app development. Currently building cool things and learning daily.</p>
-      <div class="skills">
-        <span class="skill-tag">Python</span>
-        <span class="skill-tag">Machine Learning</span>
-        <span class="skill-tag">Backend Development</span>
-        <span class="skill-tag">Streamlit</span>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <section class="hero">
+      <h2>Hi, I'm Aabid 👋</h2>
+      <p>Aspiring Software Engineer | Backend + ML Enthusiast</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="project">
-        <div class="project-icon">🎨</div>
-        <h3>Paint Mixing App</h3>
-        <p>Predicts paint output by mixing input colors. Built with Python + Streamlit.</p>
-        <div class="project-links">
-          <a href="#" class="project-link"><i class="fab fa-github"></i> View Code</a>
-          <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <p>I'm a final-year engineering student passionate about backend systems, ML, and app development. Currently building cool things and learning daily.</p>
+        <div class="skills">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Machine Learning</span>
+          <span class="skill-tag">Backend Development</span>
+          <span class="skill-tag">Streamlit</span>
         </div>
       </div>
-      <div class="project">
-        <div class="project-icon">🤖</div>
-        <h3>AI Symptom Tracker</h3>
-        <p>Uses NLP to predict disease likelihood from symptom text input.</p>
-        <div class="project-links">
-          <a href="#" class="project-link"><i class="fab fa-github"></i> View Code</a>
-          <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+    </section>
+
+    <section id="experience">
+      <h2>Experience & Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>Bachelor of Engineering</h3>
+            <p class="timeline-date">2020 - 2024</p>
+            <p>Your University Name</p>
+            <p>Major in Computer Science/Engineering</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>Software Development Intern</h3>
+            <p class="timeline-date">Summer 2023</p>
+            <p>Company Name</p>
+            <p>Worked on backend systems and ML integration</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact">
-    <h2>Get in Touch</h2>
-    <div class="contact-content">
-      <p>I'm always open to new opportunities and collaborations!</p>
-      <div class="contact-links">
-        <a href="mailto:aabidmohamed2003@gmail.com" class="contact-link">
-          <i class="fas fa-envelope"></i>
-          aabidmohamed2003@gmail.com
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project">
+          <div class="project-icon">🎨</div>
+          <h3>Paint Mixing App</h3>
+          <p>Predicts paint output by mixing input colors. Built with Python + Streamlit.</p>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-icon">🤖</div>
+          <h3>AI Symptom Tracker</h3>
+          <p>Uses NLP to predict disease likelihood from symptom text input.</p>
+          <div class="project-links">
+            <a href="#" class="project-link"><i class="fab fa-github"></i> View Code</a>
+            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog">
+      <h2>Latest Articles</h2>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <img src="https://via.placeholder.com/400x200" alt="Machine Learning Basics">
+          <div class="blog-card-content">
+            <h3>Getting Started with Machine Learning</h3>
+            <p class="date">March 15, 2024</p>
+            <p>Learn the fundamentals of machine learning and how to implement basic algorithms in Python.</p>
+            <a href="#" class="project-link">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <img src="https://via.placeholder.com/400x200" alt="Backend Development">
+          <div class="blog-card-content">
+            <h3>Building Scalable Backend Systems</h3>
+            <p class="date">March 10, 2024</p>
+            <p>Best practices for designing and implementing scalable backend architectures.</p>
+            <a href="#" class="project-link">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <img src="https://via.placeholder.com/400x200" alt="Python Development">
+          <div class="blog-card-content">
+            <h3>Advanced Python Techniques</h3>
+            <p class="date">March 5, 2024</p>
+            <p>Explore advanced Python concepts and how to write more efficient code.</p>
+            <a href="#" class="project-link">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <div class="contact-content">
+        <p>I'm always open to new opportunities and collaborations!</p>
+        <div class="contact-links">
+          <a href="mailto:aabidmohamed2003@gmail.com" class="contact-link">
+            <i class="fas fa-envelope"></i>
+            aabidmohamed2003@gmail.com
+          </a>
+          <a href="https://github.com/Brohammad" target="_blank" class="contact-link">
+            <i class="fab fa-github"></i>
+            Brohammad
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add Newsletter Section before footer -->
+    <section id="newsletter" class="newsletter">
+      <h2>Stay Updated</h2>
+      <p>Subscribe to my newsletter for the latest updates and articles</p>
+      <form id="newsletter-form" class="newsletter-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+    </section>
+
+    <!-- Add Social Links to Footer -->
+    <footer>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://github.com/Brohammad" target="_blank" class="contact-link">
+        <a href="https://twitter.com/your-handle" target="_blank" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://github.com/Brohammad" target="_blank" aria-label="GitHub">
           <i class="fab fa-github"></i>
-          Brohammad
         </a>
       </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 Aabid Mohamed. All rights reserved.</p>
-  </footer>
+      <p>© 2025 Aabid Mohamed. All rights reserved.</p>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
